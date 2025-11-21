@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Simple E-Commerce</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">MyStore</div>
+        <div class="cart-badge">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Products Section -->
+        <section class="products-section">
+            <h1>Products</h1>
+            <div class="products-grid">
+                
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQF3ZEA9WMAOG9L2BzaUezQGZ5G2YYUy-Dyb6l5H27tyKO5asS9ZVHnMMJnl1hY2DwQUjx35sKkeMam8QuI189Va0I9MKIXxJFyi682w-GLF2c_TjsL9S3J" class="product-image" />
+                    <h3 class="product-title">Wireless Headphones</h3>
+                    <p class="product-desc">Comfortable over-ear wireless headphones with great sound.</p>
+                    <p class="product-price">₹<span>1499</span></p>
+                    <button
+                        class="btn add-to-cart"
+                        data-id="1"
+                        data-name="Wireless Headphones"
+                        data-price="1499"
+                    >
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="data:image/jpeg;base64,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" class="product-image" />
+                    <h3 class="product-title">Smart Watch</h3>
+                    <p class="product-desc">Track your fitness and notifications on the go.</p>
+                    <p class="product-price">₹<span>1999</span></p>
+                    <button
+                        class="btn add-to-cart"
+                        data-id="2"
+                        data-name="Smart Watch"
+                        data-price="1999"
+                    >
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/71LJJrKbezL._SL1500_.jpg" class="product-image" />
+                    <h3 class="product-title">Bluetooth Speaker</h3>
+                    <p class="product-desc">Portable speaker with deep bass and long battery life.</p>
+                    <p class="product-price">₹<span>999</span></p>
+                    <button
+                        class="btn add-to-cart"
+                        data-id="3"
+                        data-name="Bluetooth Speaker"
+                        data-price="999"
+                    >
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTg7Kj79PlwfeHJJu-2v-oZFqeOGi9hUwxwvSrXGng15HYtbQC9oKlHQGg1YmowU6bVZdh4UHffH8Q-B_2UefsWFqO-78Df6kSB7MVGvZAxyEX--79E_uoiUg" class="product-image" />
+                    <h3 class="product-title">USB-C Charger</h3>
+                    <p class="product-desc">Fast charging adapter for all your devices.</p>
+                    <p class="product-price">₹<span>499</span></p>
+                    <button
+                        class="btn add-to-cart"
+                        data-id="4"
+                        data-name="USB-C Charger"
+                        data-price="499"
+                    >
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section class="cart-section">
+            <h2>Your Cart</h2>
+            <div id="cart-items" class="cart-items">
+                <p class="empty-text">Cart is empty</p>
+            </div>
+
+            <div class="cart-summary">
+                <p>Total: ₹<span id="cart-total">0</span></p>
+                <button id="checkout-btn" class="btn" disabled>Checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        © 2025 MyStore. Simple Demo Site.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
